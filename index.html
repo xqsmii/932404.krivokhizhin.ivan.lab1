@@ -22,20 +22,25 @@
     .layout {
       display: flex;
       flex-wrap: wrap;
+      align-items: flex-start;
       gap: 20px;
       max-width: 1250px;
       margin: 20px auto;
       padding: 0 16px;
     }
-    main { flex: 3; min-width: 280px; }
+    main {
+      max-width: 1250px;
+      margin: 0 auto 20px;
+      padding: 0 16px;
+    }
+    figure { margin: 0; }
     aside {
-      flex: 1;
+      flex: 0 1 300px;
       min-width: 200px;
       background: #ffffff;
       border: 2px solid #1e5aa8;
       border-radius: 6px;
       padding: 12px 16px;
-      align-self: flex-start;
     }
     section {
       background: #ffffff;
@@ -44,7 +49,7 @@
       margin-bottom: 16px;
     }
     h2 { color: #1e5aa8; }
-    img { border-radius: 0%; display: block; margin: 0 auto 12px 0; }
+    img { border-radius: 0%; display: block; }
     form { display: flex; flex-direction: column; gap: 10px; }
     input, textarea {
       padding: 8px;
@@ -61,12 +66,6 @@
       cursor: pointer;
     }
     button:hover { background: #164580; }
-    .layout { position: relative; }
-aside {
-  position: absolute;
-  top: 1px;    
-  left: 300px;   
-}
   </style>
 </head>
 <body>
@@ -77,39 +76,9 @@ aside {
   </header>
 
   <div class="layout">
-    <main>
+    <figure>
       <img src="https://sun9-66.vkuserphoto.ru/s/v1/ig2/zMvWQ4vwfGUY7yiykdr_Rb0QNJlRjbc5Qf41JFOE0UPr5Mf_peALyyaY9tmKfdwKpy8hex3iF1fdZSdlO8Ea3wK3.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=31qDmY3vSsWaXxmBsjaepKrxcEXtafgTBneWk2YVuVY&cs=1920x0" alt="Аватар студента" width="275" height="350">
-
-      <section>
-        <h2>Навыки</h2>
-        <ul>
-          <li>C++</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>HTML и CSS</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Проекты</h2>
-        <ol>
-          <li>Консольный менеджер задач на C++</li>
-          <li>База данных учёта студентов (SQL)</li>
-          <li>Математическая модель очереди на Python</li>
-          <li>Личная страница на HTML и CSS</li>
-        </ol>
-      </section>
-
-      <section>
-        <h2>Обратная связь</h2>
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Ваше имя">
-          <input type="email" name="email" placeholder="Ваш email">
-          <textarea name="message" rows="5" placeholder="Ваше сообщение"></textarea>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
-    </main>
+    </figure>
 
     <aside>
       <h2>Любимые технологии</h2>
@@ -120,6 +89,38 @@ aside {
       </ul>
     </aside>
   </div>
+
+  <main>
+    <section>
+      <h2>Навыки</h2>
+      <ul>
+        <li>C++</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>HTML и CSS</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Проекты</h2>
+      <ol>
+        <li>Консольный менеджер задач на C++</li>
+        <li>База данных учёта студентов (SQL)</li>
+        <li>Математическая модель очереди на Python</li>
+        <li>Личная страница на HTML и CSS</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Обратная связь</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="email" name="email" placeholder="Ваш email">
+        <textarea name="message" rows="5" placeholder="Ваше сообщение"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2026 Иван Кривохижин. Все права защищены.</p>
